@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+.Form{
+    width: 500px;
+    height: 100%;
+    margin: auto;
+    padding-top: 200px;
+    font-size: 22px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.Ufrgs-logo{
+    width: 220px;
+    margin: auto;
+}
+
+.FormItem{
+    width: 220px;
+    margin: auto;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+#calculator-tittle{
+    font-size: 24px;
+}
+
+#result{
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+}

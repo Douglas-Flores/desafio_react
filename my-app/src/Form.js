@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
+import logo from './ufrgslogo.webp';
+import './Form.css'
 
 function Form() {
     const [a_num, setAs] = useState(0);
@@ -37,27 +38,35 @@ function Form() {
   
     return (
       <div className="Form">
-        <div>
-            <label>A:</label>
+        <div className="FormItem">
+            <img src={logo} className="Ufrgs-logo" alt="UFRGS"></img>
+        </div>
+        <div className="FormItem" id='calculator-tittle'>
+            Calculadora de i3:
+        </div>
+        <div className="FormItem">
+            <label>A: </label>
             <input type="number" name="A" id="A" onChange={e => handleChange(e)}></input>
         </div>
-        <div>
-            <label>B:</label>
+        <div className="FormItem">
+            <label>B: </label>
             <input type="number" name="B" id="B" onChange={e => handleChange(e)}></input>
         </div>
-        <div>
-            <label>C:</label>
+        <div className="FormItem">
+            <label>C: </label>
             <input type="number" name="C" id="C" onChange={e => handleChange(e)}></input>
         </div>
-        <div>
-            <label>D:</label>
+        <div className="FormItem">
+            <label>D: </label>
             <input type="number" name="D" id="D" onChange={e => handleChange(e)}></input>
         </div>
-        <div>
-            <label>FF:</label>
+        <div className="FormItem">
+            <label>FF: </label>
             <input type="number" name="FF" id="FF" onChange={e => handleChange(e)}></input>
         </div>
-        <div>{a_num}A + {b_num}B + {c_num}C + {d_num}D + {ff_num}FF = {result}</div>
+        <div className='FormItem' id='result'>
+            {a_num} A + {b_num} B + {c_num} C + {d_num} D + {ff_num} FF = {result}
+        </div>
       </div>
     );
 }
