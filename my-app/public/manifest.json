@@ -16,6 +16,11 @@
       "src": "logo512.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "ufrgslogo.webp",
+      "type": "image/webp",
+      "sizes": "1000x802"
     }
   ],
   "start_url": ".",
