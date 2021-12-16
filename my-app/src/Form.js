@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { TextField } from '@material-ui/core';
 import logo from './ufrgslogo.webp';
 import './Form.css'
 
@@ -28,11 +29,11 @@ function Form() {
 
         if (parseInt(value) === NaN) {value = 0}
         if (value === '') {value = 0}
-        if (id == 'A') {setAs(parseInt(value))}
-        if (id == 'B') {setBs(parseInt(value))}
-        if (id == 'C') {setCs(parseInt(value))}
-        if (id == 'D') {setDs(parseInt(value))}
-        if (id == 'FF') {setFFs(parseInt(value))}
+        if (id === 'A') {setAs(parseInt(value))}
+        if (id === 'B') {setBs(parseInt(value))}
+        if (id === 'C') {setCs(parseInt(value))}
+        if (id === 'D') {setDs(parseInt(value))}
+        if (id === 'FF') {setFFs(parseInt(value))}
 
     }
   
@@ -45,27 +46,22 @@ function Form() {
             Calculadora de i3:
         </div>
         <div className="FormItem">
-            <label>A: </label>
-            <input type="number" name="A" id="A" onChange={e => handleChange(e)}></input>
+            <TextField className="field" id="A" label="Número de As" variant="outlined" onChange={e => handleChange(e)} />
         </div>
         <div className="FormItem">
-            <label>B: </label>
-            <input type="number" name="B" id="B" onChange={e => handleChange(e)}></input>
+            <TextField className="field" id="B" label="Número de Bs" variant="outlined" onChange={e => handleChange(e)} />
         </div>
         <div className="FormItem">
-            <label>C: </label>
-            <input type="number" name="C" id="C" onChange={e => handleChange(e)}></input>
+            <TextField className="field" id="C" label="Número de Cs" variant="outlined" onChange={e => handleChange(e)} />
         </div>
         <div className="FormItem">
-            <label>D: </label>
-            <input type="number" name="D" id="D" onChange={e => handleChange(e)}></input>
+            <TextField className="field" id="D" label="Número de Ds" variant="outlined" onChange={e => handleChange(e)} />
         </div>
         <div className="FormItem">
-            <label>FF: </label>
-            <input type="number" name="FF" id="FF" onChange={e => handleChange(e)}></input>
+            <TextField className="field" id="FF" label="Número de FFs" variant="outlined" onChange={e => handleChange(e)} />
         </div>
         <div className='FormItem' id='result'>
-            {a_num} A + {b_num} B + {c_num} C + {d_num} D + {ff_num} FF = {result}
+            {a_num} A + {b_num} B + {c_num} C + {d_num} D + {ff_num} FF = {result.toFixed(2)}
         </div>
       </div>
     );
